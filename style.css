@@ -19,3 +19,77 @@ body {
     padding: 40px 15px;
 }
 
+.entrance {
+    width: min(680px, 94vw);
+    min-height: 720px;
+    background: rgba(235, 241, 239, 0.90);
+    border: 1px solid #91aaa6;
+    padding: 35px 45px 45px;
+    text-align: center;
+    position: relative;
+}
+
+.entrance::before {
+    content: "╭";
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    color: #78918e;
+    font-size: 24px;
+}
+
+.entrance::after {
+    content: "╯";
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
+    color: #78918e;
+    font-size: 24px;
+}
+
+.welcome {
+    margin-top: 25px;
+    color: #415956;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c3d2cf;
+    border-left: 1px solid #91aaa6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7f9995;
+    border: 3px solid #c3d2cf;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #617c78;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #7f9995 #617c78;
+}
+
+.enter {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #dce6e3;
+    border: 1px solid #819b97;
+    color: #405957;
+    text-decoration: none;
+    font-family: "Pixelify Sans", monospace;
+    cursor: pointer;
+}
+
+.enter:hover {
+    background: #cbd8df;
+}
