@@ -9,15 +9,6 @@
 
     <body>
         <main class="entrance">
-            <div class="top-decoration">
-                ✦ ──────── ⋆｡°✩ ──────── ✦
-            </div>
-            <p class="tiny">you have wandered into...</p>
-            <h1>muichiroarchive</h1>
-            <p>a website dedicated to the mist hashira</p>
-            <div class="divider">
-                ~ ~ ~ ♡ ~ ~ ~
-            </div>
             <div class="portrait">
                 <img src="mui1.png" alt="Muichiro Tokito">
                 <div class="image-caption">
@@ -31,8 +22,14 @@
                 </a>
             </section>
         </main>
-        <audio autoplay loop>
+        <audio id="music" autoplay loop>
             <source src="audio/song.mp3" type="audio/mpeg">
         </audio>
+
+        <script>
+            const music = document.getElementById("music");
+            music.volume = 0.2;
+            music.currentTime = 0;
+        </script>
     </body>
 </html>

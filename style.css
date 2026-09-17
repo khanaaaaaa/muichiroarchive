@@ -22,29 +22,47 @@ body {
 .entrance {
     width: min(680px, 94vw);
     min-height: 720px;
-    background: rgba(235, 241, 239, 0.90);
-    border: 1px solid #91aaa6;
     padding: 35px 45px 45px;
     text-align: center;
     position: relative;
 }
 
-.entrance::before {
-    content: "╭";
-    position: absolute;
-    top: 10px;
-    left: 14px;
-    color: #78918e;
-    font-size: 24px;
+.portrait img {
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-100vh);
+    animation: imageFall 1.2s ease-out forwards;
 }
 
-.entrance::after {
-    content: "╯";
-    position: absolute;
-    bottom: 10px;
-    right: 14px;
-    color: #78918e;
-    font-size: 24px;
+.image-caption,
+.welcome {
+    opacity: 0;
+    animation: showPage 0.5 ease forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes imageFall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    75% {
+        transform: translateY(20px);
+    }
+    90% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes showPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .welcome {
